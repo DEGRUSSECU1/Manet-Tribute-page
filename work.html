@@ -9,18 +9,21 @@
     <!--  Start  handlebars template For the first section -->
 
     <script id="templateHB" type="text/x-handlebars-template">
+ 
         {{#each paintings}}
-          <article >
-            <figure class="paintings-card">
+        <div class= "paintings-card">
+            <div class="paintings-image-container">
                 <img src="{{this.image}}" alt="{{this.name}}" />
-            </figure>
+            </div>
            
             <section class="details">
               <h2 class="name">{{this.name}}</h2>
               <p class="description">{{this.description}}</p>
               
             </section>
-          </article>
+        </div>
+       
+       
         {{/each}}
       </script>
 
@@ -30,6 +33,7 @@
   <body>
     <!--  start if NavBar -->
     <header>
+      
       <nav class="nav-bar">
         <div class="manet-picture-nav">
           <img class="nav-image" src="./resources/manet.png" />
@@ -44,12 +48,15 @@
           <li class="nav-item"><a href="#late">Biography</a></li>
         </ul>
       </nav>
+    
     </header>
-
+   
     <!-- end of NavBar -->
-
+ 
     <article class="introduction">
-      <section class="work-container" id="information"></section>
+        <h1 class="works-page-title">Works</h1>
+      <section class="paintings-container" id="information"></section>
+    
     </article>
 
     <script src="./main.js"></script>

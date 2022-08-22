@@ -1,3 +1,7 @@
+@font-face {
+  font-family: "Fredericka_the_Great";
+  src: url("./resources/Fredericka_the_Great/FrederickatheGreat-Regular.ttf");
+  }
 /* ANIMATIONS--START */
 @keyframes bounceIn {
     0% {
@@ -13,14 +17,45 @@
     }
   }
 /* ANIMATIONS--END */
+/* START  ANIMATION HOME MANET IMG*/
+@-webkit-keyframes kenburns-top {
+  0% {
+    -webkit-transform: scale(1) translateY(0);
+            transform: scale(1) translateY(0);
+    -webkit-transform-origin: 50% 16%;
+            transform-origin: 50% 16%;
+  }
+  100% {
+    -webkit-transform: scale(1.25) translateY(-15px);
+            transform: scale(1.25) translateY(-15px);
+    -webkit-transform-origin: top;
+            transform-origin: top;
+  }
+}
+@keyframes kenburns-top {
+  0% {
+    -webkit-transform: scale(1) translateY(0);
+            transform: scale(1) translateY(0);
+    -webkit-transform-origin: 50% 16%;
+            transform-origin: 50% 16%;
+  }
+  100% {
+    -webkit-transform: scale(1.25) translateY(-15px);
+            transform: scale(1.25) translateY(-15px);
+    -webkit-transform-origin: top;
+            transform-origin: top;
+  }
+}
+/* END ANIMATION HOME MANET IMG */
 body, html{
   height: 100%;
   color: #fff;
+  line-height: 1.5;
  
 }
 .introduction{
   background-image: url(./resources/background.jpg);
-  
+
 }
 /* START HOME PAGE UNDER NAVBAR */
 .top-intro{
@@ -35,10 +70,12 @@ h1{
     display: grid;
     margin-top: 15%;
     justify-content: center;
-    animation-duration: 3s;
+    animation-duration: 7s;
    animation-name: bounceIn;
    font-size: 40px;
    color: #fff;
+   font-family: Fredericka_the_Great;
+   text-shadow: -1px 0 black, 0 7px black, 1px 0 black, 0 -1px black;
 }
 h2{
     grid-row: 2;
@@ -47,9 +84,27 @@ h2{
     /* IMPORTANT  THIS IS TO CENTER IN THE MIDDLE OF THE GRID */
     align-self: center;
   justify-self: center;
+    letter-spacing: 1px;
+  font-family: Fredericka_the_Great;
+  color:#D6FFF6 ;
+  text-shadow: 5px 5px 10px black; 
+}
 
-    
-    
+.top-image-figcaption{
+  font-family: Fredericka_the_Great;
+  color:#D6FFF6 ;
+  text-shadow: 5px 5px 10px black; 
+}
+#video-title{
+  margin: 5%;
+  grid-row:3; 
+  grid-column: 3/ span 4;
+  animation: none;
+  align-items: flex-end;
+}
+.video{
+  grid-column: 3/ span 4;
+  grid-row: 4;
 }
 /* END HOME PAGE UNDER NAVBAR */
 
@@ -61,6 +116,23 @@ h2{
   margin: 5%;
   align-self: center;
   justify-self: center;
+  border-radius: 16px;
+  -webkit-animation: kenburns-top 3s ease-out both;
+  animation: kenburns-top 3s ease-out both;
+  
+}
+
+.top-image:hover{
+  width: 300px;
+  grid-column: 2 / span 2;
+  grid-row: 2;
+  margin: 5%;
+  align-self: center;
+  justify-self: center;
+  border-radius: 16px;
+  transform: scale(1.2);
+  transition: 2s ease-in;
+  transition: 2s ease-out;
   
 }
 .top-image-figcaption{
@@ -77,12 +149,15 @@ h2{
  
 }
 .nav-bar {
+  background-color: beige;
   display: flex;
   height: 69px;
   border-bottom: 3px solid red;
+  border-top: 3px solid black;
   justify-content: space-between;
   align-items: center;
   padding: 10px 0px;
+ 
 
  
 }
@@ -114,56 +189,82 @@ h2{
 } 
 
 
-/* START NAVBAR */
+/* END NAVBAR */
   
-/* CARD WORK PAGE PAINTINGS*/
 
-.work-container{
+/* START  WORKS PAGE*/
+
+
+/* START WORKS PAGE TITLE */
+.works-page-title{
+  margin: 0;
+  font-size: 50px;
+}
+/* END WORKS PAGE TITLE */
+
+
+/* START  CARD WORKS PAGE PAINTINGS*/
+
+.paintings-container{
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(375px, 1fr));
   grid-gap: 2rem;
-  margin: 2rem;
+  
+}
+.paintings-card{
+  align-self: center;
+  justify-self: center;
+  margin-left: 5%;
+  margin-right: 5%;
 }
 
-.paintings-card{
-  height: 370px;
-  width: 300px;
+.paintings-image-container{
+  height: 300px;
+  width: 350px;
   position: relative;
-  overflow: hidden;
-  border-radius: 8px;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
   display: grid;
   grid-template-rows: 1fr 1fr;
   transition: 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+  margin: 5%;
+  justify-content: center;
+  border-radius: 16px;
+
 }
-.paintings-card:hover {
+.paintings-image-container:hover {
   transform: scale(1.035, 1.035);
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 15px 15px rgba(211, 214, 24, 0.5);
 }
-.paintings-card img{
-  position: absolute;
+.paintings-image-container img{
+ position: absolute;
   top: 0;
   height: 100%;
   width: 100%;
   z-index: 1;
   transition: 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+  border-radius: 16px;
   
 }
-.paintings-container :hover img {
-  transform: translateY(-10px);
-}
+
 .details h2{
+  text-shadow: -1px 0 black, 0 5px black, 1px 0 black, 0 -1px black;
   color: white;
   font-size: 34px;
   margin: 20px 0 0 20px;
   margin: 5%;
+  border-bottom: 3px solid black;
+  
 }
 .details p{
-  color: white;
+  margin-top: 5%;
+  max-width: 400px;
+  color: #D6FFF6;
+  font-size: 20px;
+  text-shadow: 5px 5px 10px black;
   font-weight: 400;
-  font-size: 16px;
   align-self: end;
   margin: 0 0 20px 20px;
   letter-spacing: 0.5px;
   text-align: justify;
 }
+/* END  CARD WORK PAGE PAINTINGS*/
+/* END  WORKS PAGE*/

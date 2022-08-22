@@ -3,6 +3,8 @@ const context = {
     body: 'French painter. He was one of the first 19th-century artists to paint modern life, and a pivotal figure in the transition from Realism to Impressionism.',
     image:'./resources/manet.png',
     biography: 'Edouard Manet was born in January 23, 1832 into a wealthy Parisian family. His father, a high ranking judge, wanted Edouard to study law and follow in his footsteps. But Edouard refused to choose a respectable career. He wanted to become a painter. Thank god for that! Imagine a world without Manet paintings!',
+    figcaption:'Edouard Manet, The Father of Modern Art & the Impressionism Art Movement',
+    video:'https://www.youtube.com/embed/G5LAVss7rZg',
     paintings: [
       {
         image: './resources/secondEdouard_Manet_A_Bar_at_the_Folies-Bergère.webp',
