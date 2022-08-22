@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="./handlebars.min.js"></script>
+    <!--  Start  handlebars template For the first section -->
+    <script id="templateHB" type="text/x-handlebars-template">
+      <h1>{{title}}</h1>
+      <h2>{{body}}</h2>
+      <img class="top-image" src={{image}} />
+      <figcaption class="top-image-figcaption">Using props and ingenuity, Manet captured the beauty of his time.</figcaption>
+    </script>
+ 
+
+    <!--  END  handlebars template  -->
+    <title>Manet Tribute Page</title>
+  </head>
+  <body>
+    <!--  start if NavBar -->
+    <header>
+      <nav class="nav-bar">
+        <div class="manet-picture-nav">
+          <img class="bio-img" src="./resources/eduard-mane-berta-morizo-vid-1.jpg" />
+        </div>
+        <ul class="nav-list">
+          <li class="nav-item">
+            <a href="./work.html">Work</a>
+          </li>
+          <li class="nav-item">
+            <a href="">Legacy</a>
+          </li>
+          <li class="nav-item"><a href="#late">Biography</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- end of NavBar -->
+
+    <article class="introduction">
+      <section class="top-intro" id="information"></section>
+    </article>
+
+    <script src="./main.js"></script>
+  </body>
+</html>

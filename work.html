@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="./handlebars.min.js"></script>
+    <!--  Start  handlebars template For the first section -->
+
+    <script id="templateHB" type="text/x-handlebars-template">
+        {{#each paintings}}
+          <article >
+            <figure class="paintings-card">
+                <img src="{{this.image}}" alt="{{this.name}}" />
+            </figure>
+           
+            <section class="details">
+              <h2 class="name">{{this.name}}</h2>
+              <p class="description">{{this.description}}</p>
+              
+            </section>
+          </article>
+        {{/each}}
+      </script>
+
+    <!--  END  handlebars template  -->
+    <title>Manet Tribute Page</title>
+  </head>
+  <body>
+    <!--  start if NavBar -->
+    <header>
+      <nav class="nav-bar">
+        <div class="manet-picture-nav">
+          <img class="nav-image" src="./resources/manet.png" />
+        </div>
+        <ul class="nav-list">
+          <li class="nav-item">
+            <a href="./index.html" >Home</a>
+          </li>
+          <li class="nav-item">
+            <a href="" >Legacy</a>
+          </li>
+          <li class="nav-item"><a href="#late">Biography</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- end of NavBar -->
+
+    <article class="introduction">
+      <section class="work-container" id="information"></section>
+    </article>
+
+    <script src="./main.js"></script>
+  </body>
+</html>

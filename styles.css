@@ -1,0 +1,169 @@
+/* ANIMATIONS--START */
+@keyframes bounceIn {
+    0% {
+      transform: scale(0.1);
+      opacity: 0;
+    }
+    60% {
+      transform: scale(1.2);
+      opacity: 1;
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+/* ANIMATIONS--END */
+body, html{
+  height: 100%;
+  color: #fff;
+ 
+}
+.introduction{
+  background-image: url(./resources/background.jpg);
+  
+}
+/* START HOME PAGE UNDER NAVBAR */
+.top-intro{
+   display: grid;
+   grid-template: 200px repeat(5, 1fr)/ repeat(8, 1fr);
+   gap: 10px;
+  
+}
+h1{
+   grid-row: 1;
+    grid-column: 4/ span 2;
+    display: grid;
+    margin-top: 15%;
+    justify-content: center;
+    animation-duration: 3s;
+   animation-name: bounceIn;
+   font-size: 40px;
+   color: #fff;
+}
+h2{
+    grid-row: 2;
+    grid-column: 5 / span 3;
+    display: grid;
+    /* IMPORTANT  THIS IS TO CENTER IN THE MIDDLE OF THE GRID */
+    align-self: center;
+  justify-self: center;
+
+    
+    
+}
+/* END HOME PAGE UNDER NAVBAR */
+
+/* START IMAGE HOME PAGE WITH NAME AND ABOUT PAINTER */
+.top-image{
+  width: 300px;
+  grid-column: 2 / span 2;
+  grid-row: 2;
+  margin: 5%;
+  align-self: center;
+  justify-self: center;
+  
+}
+.top-image-figcaption{
+  grid-row: 3;
+  grid-column: 2 / span 2;
+  margin: 5%;
+  justify-self: center;
+}
+/* END IMAGE HOME PAGE WITH NAME AND ABOUT PAINTER */ */
+
+/* START NAVBAR */
+.bio-img{
+  width: 100px;
+ 
+}
+.nav-bar {
+  display: flex;
+  height: 69px;
+  border-bottom: 3px solid red;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0px;
+
+ 
+}
+.nav-list .nav-item {
+  display: inline-flex;
+  padding: 20px 10px;
+}
+.nav-item a {
+  color: seashell;
+  background-color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  border-radius: 16px;
+  margin: 5%;
+  animation: bounceIn 2s;
+}
+.manet-picture-nav{
+  display: flex;
+}
+.manet-picture-nav img{
+  width: 100px;
+  margin: 15%;
+}
+
+.nav-item a:hover {
+  background-color: #fff;
+  color: black;
+} 
+
+
+/* START NAVBAR */
+  
+/* CARD WORK PAGE PAINTINGS*/
+
+.work-container{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(375px, 1fr));
+  grid-gap: 2rem;
+  margin: 2rem;
+}
+
+.paintings-card{
+  height: 370px;
+  width: 300px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  transition: 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+.paintings-card:hover {
+  transform: scale(1.035, 1.035);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+}
+.paintings-card img{
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  transition: 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+  
+}
+.paintings-container :hover img {
+  transform: translateY(-10px);
+}
+.details h2{
+  color: white;
+  font-size: 34px;
+  margin: 20px 0 0 20px;
+  margin: 5%;
+}
+.details p{
+  color: white;
+  font-weight: 400;
+  font-size: 16px;
+  align-self: end;
+  margin: 0 0 20px 20px;
+  letter-spacing: 0.5px;
+  text-align: justify;
+}
