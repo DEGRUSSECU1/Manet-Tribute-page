@@ -51,6 +51,7 @@ body, html{
   height: 100%;
   color: #fff;
   line-height: 1.5;
+
  
 }
 .introduction{
@@ -60,8 +61,9 @@ body, html{
 /* START HOME PAGE UNDER NAVBAR */
 .top-intro{
    display: grid;
-   grid-template: 200px repeat(5, 1fr)/ repeat(8, 1fr);
+   grid-template: repeat(7, 250px)/ repeat(8, 1fr);
    gap: 10px;
+  
   
 }
 h1{
@@ -94,17 +96,34 @@ h2{
   font-family: Fredericka_the_Great;
   color:#D6FFF6 ;
   text-shadow: 5px 5px 10px black; 
+  font-size: 18px;
+  max-height: 100px;
+ padding-top: 15px;
+}
+#biography-title{
+  grid-row:4; 
+  grid-column: 2/ span 2;
+  max-height: 100px;
+  align-items: flex-start;
+  animation: none;
+  
+}
+#biography-text{
+  grid-row: 5;
+  grid-column: 2 / span 3;
+  font-size: 20px;
+ 
 }
 #video-title{
   margin: 5%;
-  grid-row:3; 
-  grid-column: 3/ span 4;
+  grid-row:4; 
+  grid-column: 5/ span 4;
   animation: none;
-  align-items: flex-end;
+ 
 }
 .video{
-  grid-column: 3/ span 4;
-  grid-row: 4;
+  grid-column: 5/ span 4;
+  grid-row: 5;
 }
 /* END HOME PAGE UNDER NAVBAR */
 
@@ -113,7 +132,6 @@ h2{
   width: 300px;
   grid-column: 2 / span 2;
   grid-row: 2;
-  margin: 5%;
   align-self: center;
   justify-self: center;
   border-radius: 16px;
@@ -254,7 +272,7 @@ h2{
   border-bottom: 3px solid black;
   
 }
-.details p{
+p{
   margin-top: 5%;
   max-width: 400px;
   color: #D6FFF6;
